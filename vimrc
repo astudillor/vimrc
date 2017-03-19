@@ -60,6 +60,9 @@ inoremap <silent> <c-s> <c-o>:up<cr>
 vnoremap <silent> <c-s> <c-[>:up<cr>
 
 " NERDTree 
-nnoremap <silent> <F12> :NERDTreeToggle<cr>
-inoremap <silent> <F12> <c-[>:NERDTreeToggle<cr>
-vnoremap <silent> <F12> <c-[>:NERDTreeToggle<cr>
+nnoremap <silent> <c-n> :NERDTreeToggle<cr>
+inoremap <silent> <c-n> <c-[>:NERDTreeToggle<cr>
+vnoremap <silent> <c-n> <c-[>:NERDTreeToggle<cr>
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = 'v'
+
