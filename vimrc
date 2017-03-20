@@ -37,6 +37,7 @@ color torte " color scheme
 "spelling
 hi clear SpellBad
 hi SpellBad cterm=underline
+set spell spelllang=en_us
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
