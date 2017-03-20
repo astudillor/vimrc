@@ -54,7 +54,7 @@ endif
 noremap ,bb :w <bar> exec '!pdflatex %'<cr> 
 noremap ,br :w <bar> exec '!bibtex %'<cr> 
 
-" ctrl-s for saving the file
+" ctrl-s for saving the file (add to bashrc 'stty -ixon' without quotes)
 nnoremap <silent> <c-s> :up<cr>
 inoremap <silent> <c-s> <c-o>:up<cr>
 vnoremap <silent> <c-s> <c-[>:up<cr>
