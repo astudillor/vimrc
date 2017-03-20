@@ -13,8 +13,8 @@ Just copy vimrc to ~/.vimrc
 
 ## Pluggin
 
-This vimrc file has configurated the <c-n> key for [NerdTree](https://github.com/scrooloose/nerdtree/blob/master/doc/NERD_tree.txt),
-and comment a line in insert mode with <c-d> using the [vim-commentary](https://github.com/tpope/vim-commentary).
+This vimrc file has configurated the <ctrl-n> key for [NerdTree](https://github.com/scrooloose/nerdtree/blob/master/doc/NERD_tree.txt),
+and comment a line in insert mode with <cctrl-d> using the [vim-commentary](https://github.com/tpope/vim-commentary).
 
 ## Serve your self
 
