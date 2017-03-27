@@ -62,7 +62,6 @@ vnoremap <silent> <c-s> <c-[>:up<cr>
 
 " NERDTree 
 nnoremap <silent> <c-n> :NERDTreeToggle<cr>
-inoremap <silent> <c-n> <c-[>:NERDTreeToggle<cr>
 vnoremap <silent> <c-n> <c-[>:NERDTreeToggle<cr>
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
