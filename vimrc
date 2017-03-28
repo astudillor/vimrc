@@ -41,13 +41,15 @@ set spell spelllang=en_us
 " Set color column 80
 highlight ColorColumn ctermbg=gray
 set colorcolumn=80
+" Text till 80th column
+setl tw=80 fo+=t
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
     exe prefix . "noremap " . key . " <Nop>"
   endfor
- endfor
- vnoremap < <gv
+endfor
+vnoremap < <gv
  " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
