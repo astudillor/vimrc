@@ -55,8 +55,6 @@ if has("autocmd")
   \ | exe "normal! g'\"" | endif
 endif
 
-endif
-
 " Compile latex with ,bb and bibtex ,br 
 noremap ,bb :w <bar> exec '!pdflatex %'<cr> 
 noremap ,br :w <bar> exec '!bibtex %'<cr> 
