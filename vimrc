@@ -42,7 +42,7 @@ set spell spelllang=en_us
 highlight ColorColumn ctermbg=gray
 set colorcolumn=80
 " Text till 80th column
-setl tw=80 fo+=t
+setl tw=79 fo+=t
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -67,8 +67,9 @@ inoremap <silent> <c-s> <c-o>:up<cr>
 vnoremap <silent> <c-s> <c-[>:up<cr>
 
 " NERDTree 
-nnoremap <silent> <c-n> :NERDTreeToggle<cr>
-vnoremap <silent> <c-n> <c-[>:NERDTreeToggle<cr>
+inoremap <silent> <F12> <c-[>:NERDTreeToggle<cr>
+nnoremap <silent> <F12> :NERDTreeToggle<cr>
+vnoremap <silent> <F12> <c-[>:NERDTreeToggle<cr>
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 
