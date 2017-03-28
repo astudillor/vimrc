@@ -5,15 +5,15 @@ set shiftwidth=4
 set expandtab
 " Attempt to determine the type of a file based on its name and possibly its
 " Set 'nocompatible' to ward off unexpected things that your distro might
-" " have made, as well as sanely reset options when re-sourcing .vimrc
+" have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
-" " contents. Use this to allow intelligent auto-indenting for each filetype,
-" " and for plugins that are filetype specific.
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
 filetype indent plugin on
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
-"  " When opening a new line and no filetype-specific indenting is enabled, keep
-"  " the same indent as the line you're currently on. Useful for READMEs, etc.
+" When opening a new line and no filetype-specific indenting is enabled, keep
+" the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
 set title           " show title in console title bar
 set vb              " turn off error beep/flash
@@ -38,6 +38,9 @@ color torte " color scheme
 hi clear SpellBad
 hi SpellBad cterm=underline
 set spell spelllang=en_us
+" Set color column 80
+highlight ColorColumn ctermbg=gray
+set colorcolumn=80
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -48,7 +51,10 @@ for prefix in ['i', 'n', 'v']
  " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") 
+  \ | exe "normal! g'\"" | endif
+endif
+
 endif
 
 " Compile latex with ,bb and bibtex ,br 
