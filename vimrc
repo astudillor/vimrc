@@ -74,4 +74,4 @@ let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 
 " vim-commentary
-inoremap <silent> <c-d> <c-o>:normal gcc<cr>
+inoremap <silent> <c-i> <c-o>:normal gcc<cr>
