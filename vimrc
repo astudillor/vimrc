@@ -57,14 +57,14 @@ if has("autocmd")
   \ | exe "normal! g'\"" | endif
 endif
 
-" Compile latex with ,bb and bibtex ,br 
-noremap ,bb :w <bar> exec '!pdflatex %'<cr> 
-noremap ,br :w <bar> exec '!bibtex %'<cr> 
-
 " ctrl-s for saving the file (add to bashrc 'stty -ixon' without quotes)
 nnoremap <silent> <c-s> :up<cr>
 inoremap <silent> <c-s> <c-o>:up<cr>
 vnoremap <silent> <c-s> <c-[>:up<cr>
+
+" Compile latex with ,bb and bibtex ,br 
+noremap ,bb :w <bar> exec '!pdflatex %'<cr> 
+noremap ,br :w <bar> exec '!bibtex %'<cr> 
 
 " NERDTree 
 inoremap <silent> <F12> <c-[>:NERDTreeToggle<cr>
