@@ -9,7 +9,10 @@ set expandtab
 set nocompatible
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
+set encoding=utf-8  " The encoding displayed.
+set fileencoding=utf-8  " The encoding written to file.
 filetype indent plugin on
+
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
 " When opening a new line and no filetype-specific indenting is enabled, keep
