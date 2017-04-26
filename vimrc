@@ -65,6 +65,10 @@ nnoremap <silent> <c-s> :up<cr>
 inoremap <silent> <c-s> <c-o>:up<cr>
 vnoremap <silent> <c-s> <c-[>:up<cr>
 
+" ctrl-z to suspend vim and go the shell command in insert mode
+" remeber ctrl-d to go back
+inoremap <silent> <c-z> <c-o>:sh<cr>
+
 " Compile latex with ,bb and bibtex ,br 
 noremap ,bb :w <bar> exec '!pdflatex %'<cr> 
 noremap ,br :w <bar> exec '!bibtex %'<cr> 
