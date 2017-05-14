@@ -12,7 +12,6 @@ set nocompatible
 set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
 filetype indent plugin on
-
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
 " When opening a new line and no filetype-specific indenting is enabled, keep
@@ -30,7 +29,7 @@ set cursorline      " highlight current line
 set ruler           " show the cursor position all the time
 set sm              " show matching parens
 set lazyredraw      " redraw only when we need to.
-set exrc
+set exrc            " local vimrc
 "Line numbering
 set relativenumber
 set number
@@ -88,4 +87,4 @@ let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 
 " vim-commentary
-inoremap <silent> <c-i> <c-o>:normal gcc<cr>
+inoremap <silent> <c-d> <c-o>:normal gcc<cr>
