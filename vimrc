@@ -9,7 +9,10 @@ set expandtab
 set nocompatible
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
+set encoding=utf-8  " The encoding displayed.
+set fileencoding=utf-8  " The encoding written to file.
 filetype indent plugin on
+
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
 " When opening a new line and no filetype-specific indenting is enabled, keep
@@ -62,14 +65,20 @@ if has("autocmd")
   \ | exe "normal! g'\"" | endif
 endif
 
-" Compile latex with ,bb and bibtex ,br 
-noremap ,bb :w <bar> exec '!pdflatex %'<cr> 
-noremap ,br :w <bar> exec '!bibtex %'<cr> 
-
 " ctrl-s for saving the file (add to bashrc 'stty -ixon' without quotes)
 nnoremap <silent> <c-s> :up<cr>
 inoremap <silent> <c-s> <c-o>:up<cr>
 vnoremap <silent> <c-s> <c-[>:up<cr>
+
+" ctrl-z to save file, suspend vim, go the shell command
+" insert and normal mode
+" remeber ctrl-d to go back
+inoremap <silent> <c-z> <c-o>:up<cr><c-o>:sh<cr>
+nnoremap <silent> <c-z> :up<cr>:sh<cr>
+
+" Compile latex with ,bb and bibtex ,br 
+noremap ,bb :w <bar> exec '!pdflatex %'<cr> 
+noremap ,br :w <bar> exec '!bibtex %'<cr> 
 
 " NERDTree 
 inoremap <silent> <F12> <c-[>:NERDTreeToggle<cr>
