@@ -27,13 +27,15 @@ set cursorline      " highlight current line
 set ruler           " show the cursor position all the time
 set sm              " show matching parens
 set lazyredraw      " redraw only when we need to.
+set exrc
 "Line numbering
 set relativenumber
 set number
 " Search down into subfolders
 set path+=** "Provides tab-completion for all file-related tasks
 set wildmenu " Display all matching files when we tab complete
-color torte " color scheme
+" color torte " color scheme
+let g:molokai_original = 1
 "spelling
 hi clear SpellBad
 hi SpellBad cterm=underline
@@ -43,6 +45,9 @@ highlight ColorColumn ctermbg=gray
 set colorcolumn=80
 " Text till 80th column
 setl tw=79 fo+=t
+" Text formater commands
+nnoremap <leader>l :.! fmt -w 79<cr>
+nnoremap <leader>L :0,$! fmt -w 79 -s<cr>
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
