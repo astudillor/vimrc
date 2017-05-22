@@ -46,7 +46,7 @@ set spell spelllang=en_us
 highlight ColorColumn ctermbg=gray
 set colorcolumn=80
 " Text till 80th column
-setl tw=79 fo+=t
+set tw=79 fo+=t
 " Text formater commands
 nnoremap <leader>l :.! fmt -w 79<cr>
 nnoremap <leader>L :0,$! fmt -w 79 -s<cr>
@@ -60,7 +60,7 @@ vnoremap < <gv
  " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") 
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$")
   \ | exe "normal! g'\"" | endif
 endif
 " Automatically removing all trailing whitespace
@@ -76,7 +76,7 @@ vnoremap <silent> <c-s> <c-[>:up<cr>
 inoremap <silent> <c-z> <c-o>:up<cr><c-o>:sh<cr>
 nnoremap <silent> <c-z> :up<cr>:sh<cr>
 
-" NERDTree 
+" NERDTree
 inoremap <silent> <F12> <c-[>:NERDTreeToggle<cr>
 nnoremap <silent> <F12> :NERDTreeToggle<cr>
 vnoremap <silent> <F12> <c-[>:NERDTreeToggle<cr>
