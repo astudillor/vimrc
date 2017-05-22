@@ -50,6 +50,9 @@ set tw=79 fo+=t
 " Text formater commands
 nnoremap <leader>l :.! fmt -w 79<cr>
 nnoremap <leader>L :0,$! fmt -w 79 -s<cr>
+" Persistent undo (Jovica Ilic)
+set undofile
+set undodir=~/.vim/undodir
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -77,9 +80,9 @@ inoremap <silent> <c-z> <c-o>:up<cr><c-o>:sh<cr>
 nnoremap <silent> <c-z> :up<cr>:sh<cr>
 
 " NERDTree
-inoremap <silent> <F12> <c-[>:NERDTreeToggle<cr>
+inoremap <silent> <F12> <c-o>:NERDTreeToggle<cr>
 nnoremap <silent> <F12> :NERDTreeToggle<cr>
-vnoremap <silent> <F12> <c-[>:NERDTreeToggle<cr>
+vnoremap <silent> <F12> <c-o>:NERDTreeToggle<cr>
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
 
