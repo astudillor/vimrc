@@ -79,6 +79,8 @@ vnoremap <silent> <c-s> <c-[>:up<cr>
 inoremap <silent> <c-z> <c-o>:up<cr><c-o>:sh<cr>
 nnoremap <silent> <c-z> :up<cr>:sh<cr>
 
+noremap <leader>m :w <bar> exec 'mak'<cr>
+
 " NERDTree
 inoremap <silent> <F12> <c-o>:NERDTreeToggle<cr>
 nnoremap <silent> <F12> :NERDTreeToggle<cr>
