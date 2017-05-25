@@ -47,9 +47,11 @@ highlight ColorColumn ctermbg=gray
 set colorcolumn=80
 " Text till 80th column
 set tw=79 fo+=t
+" Turn off the highlight of the last searches
+nnoremap <silent> <leader>r :nohlsearch<cr>
 " Text formater commands
-nnoremap <leader>l :.! fmt -w 79<cr>
-nnoremap <leader>L :0,$! fmt -w 79 -s<cr>
+nnoremap <silent> <leader>l :.! fmt -w 79<cr>
+nnoremap <silent> <leader>L :0,$! fmt -w 79 -s<cr>
 " Persistent undo (Jovica Ilic)
 set undofile
 set undodir=~/.vim/undodir
