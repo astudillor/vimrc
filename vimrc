@@ -81,6 +81,14 @@ nnoremap <silent> <c-z> :up<cr>:sh<cr>
 
 noremap <leader>m :w <bar> exec 'mak'<cr>
 
+" Permanent very magic mode for regular expressions
+nnoremap / /\v
+vnoremap / /\v
+cnoremap %s/ %smagic/
+cnoremap \>s/ \>smagic/
+nnoremap :g/ :g/\v
+nnoremap :g// :g//
+
 " NERDTree
 inoremap <silent> <F12> <c-o>:NERDTreeToggle<cr>
 nnoremap <silent> <F12> :NERDTreeToggle<cr>
