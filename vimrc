@@ -87,6 +87,3 @@ nnoremap <silent> <F12> :NERDTreeToggle<cr>
 vnoremap <silent> <F12> <c-o>:NERDTreeToggle<cr>
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
-
-" vim-commentary
-inoremap <silent> <c-d> <c-o>:normal gcc<cr>
