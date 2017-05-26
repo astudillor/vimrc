@@ -52,9 +52,11 @@ nnoremap <silent> <leader>r :nohlsearch<cr>
 " Text formater commands
 nnoremap <silent> <leader>l :.! fmt -w 79<cr>
 nnoremap <silent> <leader>L :0,$! fmt -w 79 -s<cr>
-" Persistent undo (Jovica Ilic)
-set undofile
-set undodir=~/.vim/undodir
+" Persistent undo
+if has('persistent_undo')
+    set undofile
+    set undodir=~/.vim/undodir
+endif
 " Unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
