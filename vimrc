@@ -19,7 +19,7 @@ set backspace=indent,eol,start
 set autoindent
 set title           " show title in console title bar
 set vb              " turn off error beep/flash
-set ls=2            " allways show status line
+set ls=2            " always show status line
 set showcmd         " show command in bottom bar
 set cindent         " cindent
 set smartindent     " smart indent
@@ -27,20 +27,20 @@ set hlsearch        " highlight searches
 set incsearch       " do incremental searching
 set cursorline      " highlight current line
 set ruler           " show the cursor position all the time
-set sm              " show matching parens
+set sm              " show matching parenthesis
 set lazyredraw      " redraw only when we need to.
 set exrc            " local vimrc
 "Line numbering
 set relativenumber
 set number
-" Search down into subfolders
+" Search down into sub-folders
 set path+=** "Provides tab-completion for all file-related tasks
 set wildmenu " Display all matching files when we tab complete
 " color torte " color scheme
 let g:molokai_original = 1
 "spelling
 hi clear SpellBad
-hi SpellBad cterm=underline
+hi SpellBad cterm=italic,inverse
 set spell spelllang=en_us
 " Set color column 80
 highlight ColorColumn ctermbg=gray
@@ -49,12 +49,13 @@ set colorcolumn=80
 set tw=79 fo+=t
 " Turn off the highlight of the last searches
 nnoremap <silent> <leader>r :nohlsearch<cr>
-" Text formater commands
+" Text formatter commands
 nnoremap <silent> <leader>l :.! fmt -w 79<cr>
 nnoremap <silent> <leader>L :0,$! fmt -w 79 -s<cr>
 " Persistent undo
 if has('persistent_undo')
     set undofile
+    " remember create this directory $ mkdir ~/.vim/undodir
     set undodir=~/.vim/undodir
 endif
 " Unbind the cursor keys in insert, normal and visual modes.
@@ -85,13 +86,10 @@ nnoremap <silent> <c-z> :up<cr>:sh<cr>
 
 noremap <leader>m :w <bar> exec 'mak'<cr>
 
-" Permanent very magic mode for regular expressions
-nnoremap / /\v
-vnoremap / /\v
-cnoremap %s/ %smagic/
-cnoremap \>s/ \>smagic/
-nnoremap :g/ :g/\v
-nnoremap :g// :g//
+" Execute current line or current selection as Vim EX commands.
+" from https://stackoverflow.com/questions/14385998
+nnoremap <F2> :exe getline(".")<CR>
+vnoremap <F2> :<C-w>exe join(getline("'<","'>"),'<Bar>')<CR>
 
 " NERDTree
 inoremap <silent> <F12> <c-o>:NERDTreeToggle<cr>
