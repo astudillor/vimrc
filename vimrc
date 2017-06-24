@@ -26,6 +26,7 @@ Plugin 'repeat.vim'
 Plugin 'fugitive.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'commentary.vim'
+Plugin 'molokai'
 call vundle#end()
 
 filetype indent plugin on
