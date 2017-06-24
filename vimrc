@@ -11,6 +11,23 @@ set nocompatible
 " and for plugins that are filetype specific.
 set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'surround.vim'
+Plugin 'repeat.vim'
+Plugin 'fugitive.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'commentary.vim'
+call vundle#end()
+
 filetype indent plugin on
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
