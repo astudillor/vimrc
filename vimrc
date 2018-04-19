@@ -26,7 +26,7 @@ Plugin 'repeat.vim'
 Plugin 'fugitive.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'commentary.vim'
-Plugin 'molokai'
+" Plugin 'molokai'
 call vundle#end()
 
 filetype indent plugin on
@@ -54,17 +54,17 @@ set number
 " Search down into sub-folders
 set path+=** "Provides tab-completion for all file-related tasks
 set wildmenu " Display all matching files when we tab complete
-" color torte " color scheme
-let g:molokai_original = 1
+color torte " color scheme
+" let g:molokai_original = 1
 "spelling
 hi clear SpellBad
-hi SpellBad cterm=italic,inverse
+hi SpellBad cterm=italic,underline
 set spell spelllang=en_us
 " Set color column 80
-highlight ColorColumn ctermbg=gray
-set colorcolumn=80
+" highlight ColorColumn ctermbg=gray
+" set colorcolumn=80
 " Text till 80th column
-set tw=79 fo+=t
+" set tw=79 fo+=t
 " Turn off the highlight of the last searches
 nnoremap <silent> <leader>r :nohlsearch<cr>
 " Text formatter commands
