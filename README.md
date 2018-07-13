@@ -16,6 +16,6 @@ Just copy vimrc to ~/.vimrc
 This vimrc file has configurated the ctrl-n key for [NerdTree](https://github.com/scrooloose/nerdtree/blob/master/doc/NERD_tree.txt),
 and comment a line in insert mode with ctrl-d using the [vim-commentary](https://github.com/tpope/vim-commentary).
 
-## Serve your self
+## Serve yourself
 
 Copy and modified as you want.
