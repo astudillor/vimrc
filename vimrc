@@ -26,10 +26,26 @@ Plugin 'repeat.vim'
 Plugin 'fugitive.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'commentary.vim'
-" Plugin 'molokai'
+Plugin 'molokai'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'luochen1990/rainbow'
+Plugin 'chriskempson/base16-vim'
+Plugin 'python-mode/python-mode'
 call vundle#end()
 
+let g:pymode_python = 'python3'
+
+"Rainbow brackets
+let g:rainbow_active = 1
+
 filetype indent plugin on
+" let g:airline_theme='molokai'
+" the separator used on the left side
+" let g:airline_left_sep=''
+" " the separator used on the right side
+" let g:airline_right_sep=''
+
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
 " When opening a new line and no filetype-specific indenting is enabled, keep
@@ -54,17 +70,33 @@ set number
 " Search down into sub-folders
 set path+=** "Provides tab-completion for all file-related tasks
 set wildmenu " Display all matching files when we tab complete
-color torte " color scheme
+" color torte " color scheme
+" set termguicolors
+set term=screen-256color
+color molokai
 " let g:molokai_original = 1
+" let g:rehash256 = 1
+hi Comment ctermfg=lightblue
+" set background=dark
+hi CursorLineNr cterm=bold
+hi CursorLine cterm=bold
+
 "spelling
-hi clear SpellBad
-hi SpellBad cterm=italic,underline
 set spell spelllang=en_us
+hi clear SpellBad
+hi clear SpellLocal
+hi clear SpellCap
+hi clear SpellRare
+hi SpellBad cterm=underline,bold
+hi SpellLocal cterm=underline,bold
+hi SpellCap cterm=underline,bold
+hi SpellRare cterm=underline,bold
+
 " Set color column 80
-" highlight ColorColumn ctermbg=gray
-" set colorcolumn=80
+highlight ColorColumn ctermbg=gray
+set colorcolumn=80
 " Text till 80th column
-" set tw=79 fo+=t
+set tw=79 fo+=t
 " Turn off the highlight of the last searches
 nnoremap <silent> <leader>r :nohlsearch<cr>
 " Text formatter commands
@@ -115,3 +147,4 @@ nnoremap <silent> <F12> :NERDTreeToggle<cr>
 vnoremap <silent> <F12> <c-o>:NERDTreeToggle<cr>
 let g:NERDTreeDirArrowExpandable = '>'
 let g:NERDTreeDirArrowCollapsible = 'v'
+let @i="^mmyy3ggp:left\<cr>Iimport \<esc>`md$"

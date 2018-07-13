@@ -9,13 +9,27 @@ vim starts to look better.
 
 ## Installation
 
-Just copy vimrc to ~/.vimrc
+    sh ./configVim.sh
 
-## Pluggin
+## Pluggins using Vundle
 
-This vimrc file has configurated the ctrl-n key for [NerdTree](https://github.com/scrooloose/nerdtree/blob/master/doc/NERD_tree.txt),
-and comment a line in insert mode with ctrl-d using the [vim-commentary](https://github.com/tpope/vim-commentary).
+'VundleVim/Vundle.vim'
+'MarcWeber/vim-addon-mw-utils'
+'tomtom/tlib_vim'
+'garbas/vim-snipmate'
+'honza/vim-snippets'
+'surround.vim'
+'repeat.vim'
+'fugitive.vim'
+'scrooloose/nerdtree'
+'commentary.vim'
+'molokai'
+'vim-airline/vim-airline'
+'vim-airline/vim-airline-themes'
+'luochen1990/rainbow'
+'chriskempson/base16-vim'
+'python-mode/python-mode'
 
-## Serve your self
+## Serve yourself
 
 Copy and modified as you want.
